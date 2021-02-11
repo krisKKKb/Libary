@@ -16,11 +16,8 @@ class BookController extends Controller
         ->leftJoin('books', 'books.id', '=', 'book_authors.author_id')
         ->select('books.*', 'authors.*');
         //  $books->orderBy('last_name');
-        $books->get();
-        if () {
-            
-        }
-        dd($books->first());
+        // $books->get();
+        // dd($books->first());
 
         $books = Book::query()->with('author');
         $author = Book::query()->with('books');
